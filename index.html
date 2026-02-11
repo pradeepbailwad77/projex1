@@ -1,31 +1,4 @@
 <!DOCTYPE html>
-const messages = [
-  "Harami 🥺",
-  "Kutti 😭",
-  "Kamini 😏",
-  "Bass Karrr 💔",
-  "Ab Yes bol 💖",
-];
-
-function showRandomText() {
-  const text = document.createElement("div");
-
-  text.innerText = messages[Math.floor(Math.random() * messages.length)];
-
-  text.style.position = "absolute";
-  text.style.left = Math.random() * window.innerWidth + "px";
-  text.style.top = Math.random() * window.innerHeight + "px";
-  text.style.fontSize = "20px";
-  text.style.fontWeight = "bold";
-  text.style.color = "white";
-  text.style.animation = "fadeOut 2s forwards";
-
-  document.body.appendChild(text);
-
-  setTimeout(() => {
-    text.remove();
-  }, 2000);
-}
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -122,6 +95,33 @@ img {
 </div>
 
 <script>
+  const messages = [
+  "Harami 🥺",
+  "Kutti 😭",
+  "Kamini 😏",
+  "Bass Karrr 💔",
+  "Ab Yes bol 💖",
+];
+
+function showRandomText() {
+  const text = document.createElement("div");
+
+  text.innerText = messages[Math.floor(Math.random() * messages.length)];
+
+  text.style.position = "absolute";
+  text.style.left = Math.random() * window.innerWidth + "px";
+  text.style.top = Math.random() * window.innerHeight + "px";
+  text.style.fontSize = "20px";
+  text.style.fontWeight = "bold";
+  text.style.color = "white";
+  text.style.animation = "fadeOut 2s forwards";
+
+  document.body.appendChild(text);
+
+  setTimeout(() => {
+    text.remove();
+  }, 2000);
+}
 
 // Moving NO button (works on mobile & desktop)
 const noBtn = document.getElementById("noBtn");
